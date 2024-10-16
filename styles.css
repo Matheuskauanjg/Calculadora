@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0d47a1;
+    padding: 10px 20px;
+}
+
+header input {
+    width: 50%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.cart a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    margin: 20px;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.promo-text {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar de Categorias */
+.categorias {
+    width: 20%;
+    background-color: #00ff00;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.categorias ul {
+    list-style: none;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Seção de Produtos */
+.produtos {
+    width: 75%;
+    background-color: #ff00ff;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+}
