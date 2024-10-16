@@ -3,38 +3,28 @@ const cartBtn = document.getElementById('cart-link');
 const cartPopup = document.getElementById('cart-popup');
 const closeBtn = document.querySelector('.close-btn');
 const cartItemsContainer = document.getElementById('cart-items');
-const totalValue = document.getElementById('total-value');
 
 // Array para armazenar os itens do carrinho
 let cartItems = [];
 
 // Função para adicionar um item ao carrinho
-function addItemToCart(itemName, itemPrice, itemImage) {
-    const item = { name: itemName, price: itemPrice, image: itemImage };
-    cartItems.push(item);
+function addItemToCart(itemName) {
+    cartItems.push(itemName);
     updateCart();
 }
 
-// Atualiza a exibição dos itens no carrinho e o total
+// Atualiza a exibição dos itens no carrinho
 function updateCart() {
     cartItemsContainer.innerHTML = ''; // Limpa a lista de itens
-    let total = 0; // Reset do total
     if (cartItems.length === 0) {
         cartItemsContainer.innerHTML = '<p>Carrinho Vazio</p>';
     } else {
         cartItems.forEach(item => {
-            total += item.price; // Adiciona o preço ao total
-
             const itemElement = document.createElement('div');
-            itemElement.className = 'cart-item';
-            itemElement.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
-                <span>${item.name} - R$${item.price.toFixed(2)}</span>
-            `;
+            itemElement.textContent = item;
             cartItemsContainer.appendChild(itemElement);
         });
     }
-    totalValue.textContent = `Total: R$${total.toFixed(2)}`; // Atualiza o total
 }
 
 // Abre o pop-up ao clicar no botão do carrinho
@@ -56,15 +46,6 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Adiciona eventos de clique aos botões "Adicionar ao Carrinho"
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
-addToCartButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const productElement = this.parentElement;
-        const itemName = productElement.dataset.nome;
-        const itemPrice = parseFloat(productElement.dataset.preco);
-        const itemImage = productElement.dataset.imagem;
-
-        addItemToCart(itemName, itemPrice, itemImage);
-    });
-});
+// Exemplo de adicionar itens ao carrinho (substitua isso pela lógica do seu produto)
+addItemToCart('Prancha de Surf');
+addItemToCart('Camiseta de Surf');
