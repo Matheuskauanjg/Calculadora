@@ -56,5 +56,6 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Aqui você deve adicionar a lógica para adicionar itens ao carrinho
-// use addItemToCart(nome, preco, imagem) para adicionar itens
+// Exemplo de adicionar itens ao carrinho (substitua isso pela lógica do seu produto)
+addItemToCart('Prancha de Surf', 300.00, 'https://example.com/image1.jpg');
+addItemToCart('Camiseta de Surf', 50.00, 'https://example.com/image2.jpg');
