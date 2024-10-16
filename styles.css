@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -89,7 +90,6 @@ header input {
     background-color: #00796b;
 }
 
-/* Produtos */
 .produtos {
     display: flex;
     flex-wrap: wrap;
@@ -113,6 +113,7 @@ header input {
     object-fit: cover;
     border-radius: 8px;
 }
+
 
 .buy-btn {
     background-color: #0288d1;
