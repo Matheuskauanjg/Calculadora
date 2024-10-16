@@ -66,6 +66,4 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Exemplo de adicionar itens ao carrinho (substitua isso pela lógica do seu produto)
-addItemToCart('Prancha de Surf', 499.90, 'https://example.com/image1.jpg');
-addItemToCart('Camiseta de Surf', 99.90, 'https://example.com/image2.jpg');
+
