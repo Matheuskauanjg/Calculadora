@@ -56,6 +56,15 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Exemplo de adicionar itens ao carrinho (substitua isso pela lógica do seu produto)
-addItemToCart('Prancha de Surf', 300.00, 'https://example.com/image1.jpg');
-addItemToCart('Camiseta de Surf', 50.00, 'https://example.com/image2.jpg');
+// Adiciona eventos de clique aos botões "Adicionar ao Carrinho"
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const productElement = this.parentElement;
+        const itemName = productElement.dataset.nome;
+        const itemPrice = parseFloat(productElement.dataset.preco);
+        const itemImage = productElement.dataset.imagem;
+
+        addItemToCart(itemName, itemPrice, itemImage);
+    });
+});
