@@ -40,3 +40,35 @@ function atualizarCarrinho() {
     cartLink.textContent = `Carrinho (${carrinho.length})`;
     cartItems.classList.remove('hidden');
 }
+
+// Função para o carrossel de banner
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 3000); // Muda o slide a cada 3 segundos
+
+// Filtro de produtos
+document.querySelectorAll('.categorias a').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const categoria = event.target.getAttribute('data-categoria');
+        filtrarProdutos(categoria);
+    });
+});
+
+function filtrarProdutos(categoria) {
+    const produtos = document.querySelectorAll('.produto');
+    produtos.forEach(produto => {
+        if (categoria === 'all' || produto.getAttribute('data-categoria') === categoria) {
+            produto.style.display = 'block';
+        } else {
+            produto.style.display = 'none';
+        }
+    });
+}
