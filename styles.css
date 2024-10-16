@@ -65,6 +65,11 @@ header input {
     object-fit: cover;
 }
 
+/* Container principal para categorias e produtos */
+.main-content {
+    display: flex;
+}
+
 /* Categorias */
 .categorias {
     width: 20%;
@@ -90,12 +95,15 @@ header input {
     background-color: #00796b;
 }
 
+/* Produtos */
 .produtos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha os produtos à esquerda */
     margin-top: 20px;
+    width: 80%; /* Largura da seção de produtos */
+    padding: 10px; /* Padding opcional */
 }
 
 .produto {
@@ -113,7 +121,6 @@ header input {
     object-fit: cover;
     border-radius: 8px;
 }
-
 
 .buy-btn {
     background-color: #0288d1;
