@@ -135,3 +135,27 @@ function adicionarAoCarrinho(nome, valor) {
     cartItems.appendChild(item);
     cartLink.textContent = 'Itens no Carrinho';
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cart = document.getElementById("cart");
+    const cartPopup = document.getElementById("cartPopup");
+    const closePopup = document.getElementById("closePopup");
+
+    // Evento de clique no carrinho
+    cart.addEventListener("click", function() {
+        cartPopup.style.display = "flex"; // Exibe o pop-up
+    });
+
+    // Evento de clique no botão de fechar
+    closePopup.addEventListener("click", function() {
+        cartPopup.style.display = "none"; // Oculta o pop-up
+    });
+
+    // Fecha o pop-up ao clicar fora dele
+    cartPopup.addEventListener("click", function(event) {
+        if (event.target === cartPopup) {
+            cartPopup.style.display = "none"; // Oculta o pop-up
+        }
+    });
+});
+

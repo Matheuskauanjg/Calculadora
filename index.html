@@ -11,14 +11,17 @@
 
     <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo SeaBreeze">
+        <div class="logo">Minha Loja</div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar produtos...">
+            <button class="search-btn">Buscar</button>
         </div>
-        <input type="text" placeholder="Buscar produtos...">
-        <button class="search-btn">Buscar</button>
-        <div class="cart">
-            <a href="#" id="cart-link">Carrinho Vazio</a>
-            <div id="cart-items" class="cart-items hidden"></div>
+        <div class="cart" id="cart">
+            <span>Carrinho</span>
+            <div class="cart-icon">
+                <!-- Aqui você pode adicionar um ícone de carrinho -->
+                <img src="carrinho.png" alt="Carrinho" />
+            </div>
         </div>
     </header>
 
@@ -34,6 +37,18 @@
             <img src="https://images.unsplash.com/photo-1563431189-64e0916f4906" alt="Equipamentos de Surf">
         </div>
     </div>
+
+    <!-- Pop-up do carrinho -->
+<div class="cart-popup" id="cartPopup">
+    <div class="cart-popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <h2>Itens no Carrinho</h2>
+        <ul id="cartItems">
+            <!-- Itens do carrinho serão adicionados aqui via JavaScript -->
+        </ul>
+        <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+</div>
 
     <main>
         <div class="main-content">
