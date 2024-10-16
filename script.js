@@ -1,12 +1,24 @@
-// Função para filtrar produtos por categoria
+// Função para filtrar produtos
+document.querySelectorAll('.categorias a').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const categoria = event.target.getAttribute('data-categoria');
+        filtrarProdutos(categoria);
+    });
+});
+
 function filtrarProdutos(categoria) {
     const produtos = document.querySelectorAll('.produto');
     produtos.forEach(produto => {
-        produto.style.display = produto.getAttribute('data-categoria') === categoria ? 'block' : 'none';
+        if (categoria === 'all' || produto.getAttribute('data-categoria') === categoria) {
+            produto.style.display = 'block';
+        } else {
+            produto.style.display = 'none';
+        }
     });
 }
 
-// Função para adicionar itens ao carrinho
+// Carrinho
 const carrinho = [];
 
 function adicionarAoCarrinho(nome, preco) {
@@ -14,7 +26,6 @@ function adicionarAoCarrinho(nome, preco) {
     atualizarCarrinho();
 }
 
-// Função para atualizar a exibição do carrinho
 function atualizarCarrinho() {
     const cartLink = document.getElementById('cart-link');
     const cartItems = document.getElementById('cart-items');
