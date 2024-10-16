@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeaBreeze - Loja de Surf</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css"> <!-- Estilo do pop-up -->
+    <script src="popup.js" defer></script> <!-- Script do pop-up -->
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -55,5 +57,18 @@
             </section>
         </div>
     </main>
+
+    <!-- Pop-up do Carrinho -->
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-content">
+            <span class="close-btn">&times;</span>
+            <h2>Itens no Carrinho</h2>
+            <div class="cart-items">
+                <!-- Itens do carrinho vão aqui -->
+            </div>
+            <button class="buy-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
 </body>
 </html>
