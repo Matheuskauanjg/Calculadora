@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeaBreeze - Loja de Surf</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -16,16 +17,21 @@
         <input type="text" placeholder="Buscar produtos...">
         <button class="search-btn">Buscar</button>
         <div class="cart">
-            <a href="#">Carrinho Vazio</a>
+            <a href="#" id="cart-link">Carrinho Vazio</a>
+            <div id="cart-items" class="cart-items hidden"></div>
         </div>
     </header>
 
-    <!-- Banner Promocional -->
-    <div class="banner">
-        <img src="https://surfalive.fbitsstatic.net/img/b/fdc0f9e2-c339-4335-9748-39c656cb6185.jpg" alt="Promoção Surf Alive Points">
-        <div class="promo-text">
-            <h2>Participe e ganhe cupons de desconto</h2>
-            <p>Compre e acumule pontos para trocá-los por descontos.</p>
+    <!-- Banner Carrossel -->
+    <div class="banner-carousel">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Surf nas Ondas">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Praia ao Pôr do Sol">
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1563431189-64e0916f4906" alt="Equipamentos de Surf">
         </div>
     </div>
 
@@ -39,17 +45,13 @@
                 <li><a href="#" data-categoria="Camisetas">Camisetas</a></li>
                 <li><a href="#" data-categoria="Shorts">Shorts</a></li>
                 <li><a href="#" data-categoria="Acessórios">Acessórios</a></li>
-                <li><a href="#" data-categoria="Equipamentos">Equipamentos</a></li>
-                <li><a href="#" data-categoria="Calçados">Calçados</a></li>
             </ul>
         </aside>
 
         <!-- Produtos -->
-        <section class="produtos">
-            <!-- Os produtos serão carregados aqui via JavaScript -->
+        <section class="produtos" id="produtos">
+            <!-- Produtos carregados automaticamente -->
         </section>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
