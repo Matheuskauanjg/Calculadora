@@ -21,4 +21,4 @@ Este é um projeto de uma **Calculadora de Operações Matemáticas** desenvolvi
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/calculadora.git
+    https://github.com/Matheuskauanjg/Calculadora.git
