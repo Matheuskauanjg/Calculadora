@@ -17,8 +17,3 @@ Este é um projeto de uma **Calculadora de Operações Matemáticas** desenvolvi
 - **Limpar (C)**: Apaga o conteúdo da tela.
 - **Resultado (=)**: Exibe o resultado da operação.
 
-## Como Usar
-
-1. Clone este repositório:
-   ```bash
-    https://github.com/Matheuskauanjg/Calculadora.git
